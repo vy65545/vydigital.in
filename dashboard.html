@@ -1,11 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dashboard - Vydigital</title>
+  <title>VY Digital Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+    }
+
+    .header {
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 250px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      text-align: center;
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.2);
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .card p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .logout {
+      display: block;
+      margin: 40px auto;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      background: #ff4b2b;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .logout:hover {
+      background: #ff416c;
+    }
+  </style>
 </head>
-<body style="font-family:Arial; text-align:center; margin-top:100px;">
-<h1>Welcome to Vydigital Dashboard 🚀</h1>
-<p>Login Successful</p>
-<a href="login.html">Logout</a>
+
+<body>
+
+  <div class="header">
+    🚀 VY Digital Admin Dashboard
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>120</h2>
+      <p>Total Users</p>
+    </div>
+
+    <div class="card">
+      <h2>45</h2>
+      <p>Active Members</p>
+    </div>
+
+    <div class="card">
+      <h2>₹ 85,000</h2>
+      <p>Monthly Revenue</p>
+    </div>
+  </div>
+
+  <button class="logout" onclick="logout()">Logout</button>
+
+  <script>
+    function logout() {
+      window.location.href = "login.html";
+    }
+  </script>
+
 </body>
 </html>
